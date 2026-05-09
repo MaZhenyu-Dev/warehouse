@@ -1,0 +1,52 @@
+# Vue-warehouse (Frontend)
+Vue-warehouse/node_modules
+Vue-warehouse/dist
+Vue-warehouse/dist-ssr
+Vue-warehouse/coverage
+Vue-warehouse/.eslintcache
+Vue-warehouse/logs
+Vue-warehouse/*.log
+Vue-warehouse/npm-debug.log*
+Vue-warehouse/yarn-debug.log*
+Vue-warehouse/yarn-error.log*
+Vue-warehouse/pnpm-debug.log*
+Vue-warehouse/lerna-debug.log*
+Vue-warehouse/*.local
+Vue-warehouse/*.tsbuildinfo
+Vue-warehouse/cypress/videos/
+Vue-warehouse/cypress/screenshots/
+Vue-warehouse/__screenshots__/
+Vue-warehouse/.DS_Store
+
+# WarehouseData (Backend)
+WarehouseData/target/
+WarehouseData/.mvn/wrapper/maven-wrapper.jar
+WarehouseData/.apt_generated
+WarehouseData/.classpath
+WarehouseData/.factorypath
+WarehouseData/.project
+WarehouseData/.settings
+WarehouseData/.sts4-cache
+WarehouseData/build/
+WarehouseData/**/*.class
+WarehouseData/**/*.jar
+WarehouseData/**/*.war
+WarehouseData/**/*.ear
+WarehouseData/src/main/resources/application.yml
+
+# IDE
+.idea
+*.iws
+*.iml
+*.ipr
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

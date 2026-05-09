@@ -1,0 +1,119 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/warehouse?useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowMultiQueries=true
+    username: your_username
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20  # 最大连接数
+      minimum-idle: 5
+
+# 良仓配置
+lc:
+  url: http://www.lc-oms.com//default/svc/web-service
+  app-token: your_lc_app_token
+  app-key: your_lc_app_key
+
+# 九方配置
+jf:
+  url: http://szjftx.yunwms.com///default/svc/web-service
+  app-token: your_jf_app_token
+  app-key: your_jf_app_key
+
+# 翼仓配置
+yc:
+  # 基础域名
+  base-url: https://api.xlwms.com
+#  sku-path: /openapi/v1/product/pagelist #分页查询产品列表
+  inventory-path: /openapi/v1/integratedInventory/pageOpen #分页查询综合库存
+#  inbound-order-url: "/openapi/v1/inboundOrder/pageList" #分页查询入库单列表
+#  inbound-box-detail-url: "/openapi/v1/inboundOrder/boxDetail" #分页查询入库单装箱明细
+  outbound-order-page-list-path: /openapi/v1/outboundOrder/pageList # 新增：分页查询小包出库单列表
+  app-key: "your_yc_app_key"
+  app-secret: "your_yc_app_secret"
+
+
+# 飞书配置
+feishu:
+  warehouse:
+    app-id: your_warehouse_app_id
+    app-secret: your_warehouse_app_secret
+    bitable-app-token: your_warehouse_bitable_app_token
+    table-id: your_warehouse_table_id
+    view-id: your_warehouse_view_id
+  local:
+    app-id: your_local_app_id
+    app-secret: your_local_app_secret
+    bitable-app-token: your_local_bitable_app_token
+    table-id: your_local_table_id
+    view-id: your_local_view_id
+  bomingshuai:
+    app-id: your_bomingshuai_app_id
+    app-secret: your_bomingshuai_app_secret
+    bitable-app-token: your_bomingshuai_bitable_app_token
+    table-id: your_bomingshuai_table_id
+    view-id: your_bomingshuai_view_id
+
+  lepan-warehouse-lc:
+    app-id: your_lepan_lc_app_id
+    app-secret: your_lepan_lc_app_secret
+    bitable-app-token: your_lepan_lc_bitable_app_token
+    table-id: your_lepan_lc_table_id
+    view-id: your_lepan_lc_view_id
+  lepan-warehouse-yc:
+    app-id: your_lepan_yc_app_id
+    app-secret: your_lepan_yc_app_secret
+    bitable-app-token: your_lepan_yc_bitable_app_token
+    table-id: your_lepan_yc_table_id
+    view-id: your_lepan_yc_view_id
+  lepan-warehouse-lc-sync:
+    app-id: your_lepan_lc_sync_app_id
+    app-secret: your_lepan_lc_sync_app_secret
+    bitable-app-token: your_lepan_lc_sync_bitable_app_token
+    table-id: your_lepan_lc_sync_table_id
+    view-id: your_lepan_lc_sync_view_id
+  lepan-warehouse-yc-sync:
+    app-id: your_lepan_yc_sync_app_id
+    app-secret: your_lepan_yc_sync_app_secret
+    bitable-app-token: your_lepan_yc_sync_bitable_app_token
+    table-id: your_lepan_yc_sync_table_id
+    view-id: your_lepan_yc_sync_view_id
+
+  mazhenyu:
+    app-id: your_mazhenyu_app_id
+    app-secret: your_mazhenyu_app_secret
+    bitable-app-token: your_mazhenyu_bitable_app_token
+    table-id: your_mazhenyu_table_id
+    view-id: your_mazhenyu_view_id
+  lepan-test:
+    app-id: your_lepan_test_app_id
+    app-secret: your_lepan_test_app_secret
+    bitable-app-token: your_lepan_test_bitable_app_token
+    table-id: your_lepan_test_table_id
+    view-id: your_lepan_test_view_id
+  test:
+    app-id: your_test_app_id
+    app-secret: your_test_app_secret
+    bitable-app-token: your_test_bitable_app_token
+    table-id: your_test_table_id
+    view-id: your_test_view_id
+
+# 吉客云配置
+jackyun:
+  api-url: https://open.jackyun.com/open/openapi/do
+  app-key: your_jackyun_app_key
+  app-secret: your_jackyun_app_secret
+  version: v1.0
+  content-type: json
+
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.dto.pojo
+  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 打印sql
+    # 驼峰命名
+    map-underscore-to-camel-case: true
